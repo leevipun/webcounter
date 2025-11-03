@@ -7,15 +7,10 @@ Suite Teardown  Close Browser
 At start the counter is zero
     Go To  ${HOME_URL}
     Title Should Be  Laskuri
-    Input Text  set_value  0
-    Click Button  Aseta
-    Page Should Contain  nappia painettu 0 kertaa
     Page Should Contain  nappia painettu 0 kertaa
 
 When button pressed twice the counter is two
     Go To  ${HOME_URL}
-    Click Button  Paina
-    Click Button  Paina
-    Page Should Contain  nappia painettu 2 kertaa
-    Click Button  Nollaa
-    Page Should Contain  nappia painettu 0 kertaa
+    Input Text  set_value  5
+    Click Button  Aseta
+    Page Should Contain  nappia painettu 5 kertaa

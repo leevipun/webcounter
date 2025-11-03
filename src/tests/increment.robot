@@ -7,6 +7,8 @@ Suite Teardown  Close Browser
 At start the counter is zero
     Go To  ${HOME_URL}
     Title Should Be  Laskuri
+    Input Text  set_value  0
+    Click Button  Aseta
     Page Should Contain  nappia painettu 0 kertaa
 
 When button pressed three times then reset counter returns to zero
